@@ -8,10 +8,13 @@
 </head>
 
 <body>
-    <h1>Home here</h1>
+    <h1 class="">Home here</h1>
     @foreach ($data as $d)
     <div>{{$d}}</div>
     @endforeach
+
+
+    
 </body>
 
 </html>

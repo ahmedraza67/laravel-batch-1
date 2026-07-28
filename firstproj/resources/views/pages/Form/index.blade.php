@@ -10,16 +10,16 @@
 <body>
     <form action="/form/submit" method="post">
         @csrf
-        <label for="">Name</label>
+        <!-- <label for="">Name</label>
         <input type="text" name="Name" id="" />
 
         <label for="">gmail</label>
         <input type="email" name="Email" id="" />
 
         <label for="">Password</label>
-        <input type="password" name="Password" id="" />
+        <input type="password" name="Password" id="" /> -->
 
-        <button type="submit">Submit</button>
+        <button type="submit">Delete</button>
     </form>
 </body>
 
