@@ -15,3 +15,6 @@ class HomeController extends Controller
         return view('pages.posts.index', compact('id'));
     }
 }
+
+
+//  php artisan make:model Post -mcr
