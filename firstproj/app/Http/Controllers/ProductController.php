@@ -27,6 +27,14 @@ class ProductController extends Controller
         //     'discount_percent' => 'hello'
         // ]);
 
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|string|max:50',
+            'description' => 'nullable|string',
+
+        ]);
+
+        // $validated1 = $request->validated();
 
         $product = new Product();
         $product->product_name = $request->name;

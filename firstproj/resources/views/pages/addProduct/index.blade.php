@@ -9,7 +9,16 @@
 
 <body>
     <form action="/addproduct" method="POST">
+
         @csrf
+        @if ($errors->any())
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="name">
 

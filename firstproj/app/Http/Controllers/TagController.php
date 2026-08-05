@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,19 +18,9 @@ class PostController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        $post =  Post::create([
-            'title' => 'hello here',
-            'deatils' => 'hksdasdhshadhadksdhksjkadsdjsakdsjakdsajk'
-        ]);
-
-        $tag = Tag::create([
-            'tag' => '#viral',
-        ]);
-
-        $post->tag()->attach($tag->id);
-        $post->tag()->sync($tag->id);
+        //
     }
 
     /**
@@ -45,7 +34,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(Tag $tag)
     {
         //
     }
@@ -53,7 +42,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -61,7 +50,7 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -69,7 +58,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(Tag $tag)
     {
         //
     }
