@@ -1,8 +1,9 @@
 <div>
-    composer require laravel/breeze --dev
+    <!-- composer require laravel/breeze --dev
     php artisan breeze:install
     php artisan migrate
     npm install
-    npm run dev
+    npm run dev -->
+    home page
 
 </div>

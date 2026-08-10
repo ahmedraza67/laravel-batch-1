@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,10 +17,23 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
+
+        $usersss = Auth::with('prodcts');
+        1;
+        // $products = Product::get($usersss->id);
+        // n+1
+        dd($usersss);
         return view('profile.edit', [
             'user' => $request->user(),
         ]);
     }
+
+    //  return redirect()->route('products.index')
+    //         ->with('success', 'Product created successfully!');
+
+    //             $request->session()->flash('success', 'Product updated successfully!');
+    // return redirect()->back();
+
 
     /**
      * Update the user's profile information.
@@ -49,6 +63,8 @@ class ProfileController extends Controller
         $user = $request->user();
 
         Auth::logout();
+
+
 
         $user->delete();
 
